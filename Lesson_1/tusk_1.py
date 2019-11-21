@@ -18,17 +18,17 @@ print(c*2) # а тут есть пробел
 name = input("Как имя твое, дитя\n ")
 
 while True:
-    age = input("Сколько годиков тебе: ") # не буду делать проверку на "аброкатабру"
+    age = input("Сколько годиков тебе: ") 
     if age.isdigit():
         break
     else:
         print("Циферкой надо ввести : ")
 
 age = int(age)
-if int age >= 18:
-    print("Уже не дитя по имени " + name + " аж " + age + " годков")
-elif int age <= 18:
-    print("Дитя по имени " + name + "  аж " + age + " годков")
+if int (age) >= 18:
+    print("Уже не дитя по имени %s  аж  %d   годков" %(name, age))
+elif int(age) <= 18:
+    print("Дитя по имени {0} аж {1} годков".format(name, age))
 else:
-    print("Что же вы тут такое вкорячили что пришли сюда?")
+    print(f" Что ты {name} дитя за годки та такие выдумало?")
 
