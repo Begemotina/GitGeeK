@@ -12,11 +12,9 @@ max = number % 10
 while True:
     number = number // 10
     if number % 10 > max:
-        max = n % 10
+        max = number % 10
     elif number > 9:
         continue
     else :
-        print("Да как вы находите-то таке выарианты?")
-
-# Выводим самое большое число
-print("Максимальное цифра в числе ", max)
+        print("Максимальное цифра в числе ", max)
+        break
