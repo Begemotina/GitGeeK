@@ -5,17 +5,29 @@
  предусмотреть обработку ситуации деления на ноль.
 """
 # Запрашиваем числа
-a = float(input("ВВедите число 1\n"))
-b = float(input("Введите число 2\n"))
+def numbers_f(n):
+    while True:
+        number = (input(f"ВВедите чило {n}\n"))
+        if number.isdigit():
+            number = float(number)
+            break
+        else:
+            if number[0] == "-":
+                number = float(number)
+                break
+            else:
+                print("Надо цифрой, а не букавками : ")
+    return number
 
-# Функция деления
-def division_f(a = 12, b = 12):
+# делим
+def division_f(a = 72.0, b = 72.0):
+
     if b != 0:
-        
         return(a / b)
     else:
         return "Нечего на ноль делить, это вредно для кармы"
 
-# запускаем функцию
-
-print(division_f(a,b))
+# запускаем наше развлечение
+a = numbers_f(1)
+b = numbers_f(2)
+print(f" \nРезультат: {division_f(a,b)}")
