@@ -11,7 +11,7 @@ while True:
         user_number = int(user_number)
         if user_number != 0 and user_number < 13:
             break
-        else:
+        else:,
             print("Ну от 1 до 12 ")
     else:
         print("Надо цифрой, а не букавками : ")
