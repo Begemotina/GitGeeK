@@ -6,3 +6,11 @@
 Реализовать вывод данных о пользователе одной строкой.
 """
 
+def my_func(name, surname, birth_yea, city, email, phone):
+    print("Данные о пользователе: ", name, surname, birth_yea, city, email, phone)
+
+my_func(name= 'Царь', surname='Романов', birth_year=1596, city='Москва', email='email', phone='0232')
+
+'''
+не стал делать что бы самому это все надо было вбить.
+'''
