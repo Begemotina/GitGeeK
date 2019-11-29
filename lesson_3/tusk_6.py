@@ -9,14 +9,15 @@
 Необходимо использовать написанную ранее функцию int_func().
 """
 
-# А вот будет у меня функция еще проверять, а не написали ли там слово с большой буквы.
+# Функция  перевода первых букв в загавные
 def int_func(word: str) -> str:
       return word.title()
 
+# Эта штука создает список, из слов которые были введены
 def sentence(sentence):
-    sentence = sentence.split()
+    sentence = sentence.split()   # раделяем большую строку на много отдельных слов
     list =[]
-    for word in sentence:
+    for word in sentence:         # цикл для засовывания слов в список
         word = int_func(word)
         list.append(word)
 
