@@ -19,7 +19,7 @@ def numbers_f(number):
             return number
         else:
             return 0   # если это не q и не число то будет возвращать 0
-# def_sum()2
+# def_sum():
 run = True
 result = 0
 while run:
