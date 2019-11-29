@@ -8,3 +8,26 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+# А вот будет у меня функция еще проверять, а не написали ли там слово с большой буквы.
+def int_func(word: str) -> str:
+      return word.title()
+
+def sentence(sentence):
+    sentence = sentence.split()
+    list =[]
+    for word in sentence:
+        word = int_func(word)
+        list.append(word)
+
+#вывести слово
+my_word = input("Введите словo\n ")
+print(int_func(my_word))
+
+#вывести несколько слов
+my_sentence = input("Введите ваши слова\n")
+print(int_func(my_sentence)) # не знаю точно что имелось в виду в задании, но оно работает
+
+# используем цикл.
+a = sentence(my_sentence)
+print(*a)
