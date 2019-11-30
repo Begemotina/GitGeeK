@@ -11,7 +11,7 @@ while True:
         user_number = int(user_number)
         if user_number != 0 and user_number < 13:
             break
-        else:,
+        else:
             print("Ну от 1 до 12 ")
     else:
         print("Надо цифрой, а не букавками : ")
@@ -19,16 +19,18 @@ while True:
 
 
 # определяем какой у нас сезон
-# оставил вот так  просто потому что так так читать проще как мне кажется
-if user_number == 1 or user_number == 2 or user_number == 12:
-    season = 0
-if user_number == 3 or user_number == 4 or user_number == 5:
-    season = 1
-if user_number == 6 or user_number == 7 or user_number == 8:
-    season = 2
-if user_number == 9 or user_number == 10 or user_number == 11:
-    season = 3
+# оставил вот так  просто потому что так так читать проще как мне кажется(мое изначальное решение)
+# if user_number == 1 or user_number == 2 or user_number == 12:
+#     season = 0
+# if user_number == 3 or user_number == 4 or user_number == 5:
+#     season = 1
+# if user_number == 6 or user_number == 7 or user_number == 8:
+#     season = 2
+# if user_number == 9 or user_number == 10 or user_number == 11:
+#     season = 3
 
+# заеменено много много if на коротенькую подсмотренную математику
+season = user_number // 3 % 4
 # решение с помощью списка
 season_list = ["зима", "весна", "лето", "осень"]
 print(" Вывод с помощью списка: Время года - ", season_list[season])
