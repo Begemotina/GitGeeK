@@ -5,3 +5,19 @@
 Для выполнения задания обязательно использовать генератор.
 
 '''
+from itertools import groupby
+list = [1, 12, 2, 1, 1, 1, 1, 1, 1, 1, 1, 4, 6, 7, 8, 1, 8, ]
+
+new_list =[el for el in list if list.count(el) <2]
+
+# попробывал создать список без повторяющихся элементов циклом, что бы понять как сделать генератор, проблема
+# что сейчас числа 22, 44 и тому подобыне тоже выкидываются
+
+# # print(new_list)
+# new_list = []
+# for i in range(0, len(list)):
+#     if list[i] not in new_list:
+#         new_list.append(list[i])
+# print(new_list)
+
+print(new_list)
