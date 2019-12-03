@@ -16,4 +16,3 @@ def my_sum_function(ferst_el, el ):
     return ferst_el * el
 
 print(reduce(my_sum_function, [el for el in range(100, 1001) if el % 2 == 0]))
-

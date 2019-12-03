@@ -10,13 +10,12 @@ from math import factorial
 
 #блок делания
 def fibo_gen():
-    for el in count(1):
+    for el in count():  # а никто не говорил что не должно быть 0!
         yield factorial(el)
 
-
-i = 1
+i = 0
 for el in fibo_gen():
-    if i < 16:
+    if i < 15:
         print(f" факториал {i}: {el}")
         i +=1
     else:
