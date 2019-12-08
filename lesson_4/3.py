@@ -6,4 +6,4 @@
 '''
 
 # просили одной строкой, во я и наколякал. Если честно мне не очень удобно это читать
-print([ number for number in range(20, 241) if number % 20 == 0 or number % 21 == 0 ])
+print([ number for number in range(20, 241) if not number % 20  or not number % 21])
