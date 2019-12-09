@@ -3,3 +3,24 @@
 Определить, кто из сотрудников имеет оклад менее 20 тыс.,
 вывести фамилии этих сотрудников. Выполнить подсчет средней величины дохода сотрудников.
 '''
+
+salary = 0
+list_lazyman = []
+# открыть и прочитать
+with open("tusk_3.txt", "r", encoding="UTF-8") as my_file:
+    content = my_file.readlines()
+
+number_stuff = len(content)# нужно что бы посчитать средний доход
+
+# проходим по строкам и для списка лентяев и суммы зряплаты
+for line in content:
+    line = line.split()
+    salary = salary + float(line[1]) # тут сразу соберем всю зараплату
+    if float(line[1]) < 20000:
+        list_lazyman.append(line[0]) # те кто попадает в список лентяев
+
+# Выводим результат
+print(f"Tе у кого зряплата меньше 20000: {list_lazyman}") # оставлю таким списком,
+print(f"Средняя зряплата: {round(salary/number_stuff,2)} рублей")
+
+
