@@ -12,7 +12,7 @@ while True:
     data = input("Введите строку, что бы закончить оставьте строку пустой.\n")
     if data == '':
         break
-    else: # н
+    else:
         my_filie.write(f"{data}\n")
 
 #  закрытие файла tusk.txt
