@@ -4,6 +4,7 @@
 '''
 
 i = 1
+
 # узнаем что живет в файле.
 with open("tusk_2.txt", "r", encoding="UTF-8") as my_file:
     content = my_file.readlines()
@@ -12,9 +13,15 @@ with open("tusk_2.txt", "r", encoding="UTF-8") as my_file:
 
     # считаем колчичество слов. держать открытым файл нам больше незачем
 for line in content:
-    line = line.split()
-    print(f"В строке {i} -- {len(line)} слов")
-    i +=1
+    line = len(line.split())
+    if line == 1:
+        word = "cлово"
+    elif line >1 and line < 5:
+         word = "cлова"
+    else:
+        word = "слов"
+    print(f"В строке {i} -- {line} {word}")
+    i += 1
 
 print("\n")
 print("Все готово")
