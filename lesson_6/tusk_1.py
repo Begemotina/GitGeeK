@@ -19,13 +19,13 @@ class TrafficLight:
         for i in range(0, 3):
             if i == 0:
                 print(f'Цвет сейчас {TrafficLight.__color[i]}')
-                sleep(3)
+                sleep(7)
             elif i == 1:
                 print(f'Цвет тепрь {TrafficLight.__color[i]}')
                 sleep(2)
             else:
                 print(f'Все тапку в пол  {TrafficLight.__color[i]} ')
-                sleep(7)
+                sleep(4)
 
 
 a = TrafficLight()
