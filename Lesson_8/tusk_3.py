@@ -13,26 +13,28 @@
 '''
 
 
-class OwnError(Exception):
-    def __init__(self, txt):
-        self.txt = txt
+class Error:
+    def __init__(self, *args):
+        self.my_list = []
+
+    def my_input(self):
 
 
-my_list = []
-while True:
-    number = input("Введите число или stop для завершения: ")
-    if number.lower() == "stop":
-        break
+        while True:
+            try:
+                val = int(input('Введите зачение(одно за раз: \n '))
+                self.my_list.append(val)
+                print(f'Текущий список - {self.my_list} \n ')
+            except:
+                print(f"Недопустимое значение - строка или булево")
+                y_or_n = input(f'Попробовать еще раз? Y/N ')
 
-    try:
+                if y_or_n == 'Y' or y_or_n == 'y':
+                    print(try_except.my_input())
+                elif y_or_n == 'N' or y_or_n == 'n':
+                    return f'Вы вышли'
+                else:
+                    return f'Вы вышли'
 
-        if not number.isdigit():
-            raise OwnError("вы ввели аброкатабру. Попробуйте еще раз")
-    except OwnError as err:
-        print(err)
-        continue
-    else:
-        my_list.append(number)
-        print(f" число: {number} добавлено.\nВаш список: {my_list} \n")
-
-print(f"работа звевершена список: {my_list}")
+try_except = Error(1)
+print(try_except.my_input())
