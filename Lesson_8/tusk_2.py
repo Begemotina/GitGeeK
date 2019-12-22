@@ -4,24 +4,21 @@
 При вводе пользователем нуля в качестве делителя программа должна корректно
 обработать эту ситуацию и не завершиться с ошибкой.
 '''
+
+
 class OwnError(Exception):
-    def __init__(self, txt):
-        self.txt = txt
+    def __init__(self, number1, number2):
+        self.number1 = number1
+        self.number2 = number2
 
-number1 = input("Введите положительное число: ")
-number2 = input("Введите положительное число: ")
+    @staticmethod
+    def null_division(number1, number2):
+        try:
+            return (number1 / number2)
+        except:
+            return (f"Нельзя так, а то же всех поглотит черная дыра!!!")
 
 
-try:
-
-    number1 = int(number1)
-    number2 = int(number2)
-    print(type(number1))
-    if number2 == 0:
-        raise OwnError("Вы ввели 0!!! теперь нас всех съедят помидоры")
-except ValueError:
-    print("вы ввели аброкатабру")
-except OwnError as err:
-    print(err)
-else:
-    print(f" результат деления: {number1 / number2}")
+division = OwnError(10, 15)
+print(OwnError.null_division(12, 35))
+print(OwnError.null_division(10, 0))
